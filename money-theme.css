@@ -1,0 +1,178 @@
+/* Classroom identity shared with Smart Money, without changing geometry logic. */
+:root {
+  --font-zh: KaiTi, STKaiti, "Kaiti SC", "楷体", "DFKai-SB", serif;
+  --ink: #3f2b14;
+  --green: #7a350e;
+  --green-2: #f5851f;
+  --mint: #fff0ca;
+  --yellow: #ffc129;
+  --yellow-2: #f5851f;
+  --cream: #fffaf0;
+  --line: #5a2c0c;
+  --pale: #fffaf0;
+  --blue: #f6a437;
+  --shadow: 0 5px 0 rgba(91,57,16,.16), 0 14px 30px rgba(116,73,20,.11);
+  --font: "Arial Rounded MT Bold", "Trebuchet MS", "Microsoft YaHei", "Noto Sans SC", Arial, sans-serif;
+}
+
+html:lang(zh) body,
+html:lang(zh) body * { font-family: var(--font-zh) !important; }
+
+body {
+  font-family: var(--font);
+  background:
+    radial-gradient(circle at 24px 24px, rgba(255,255,255,.78) 0 5px, transparent 5.5px) 0 0 / 156px 156px,
+    linear-gradient(180deg, #fffaf0 0%, #ffe094 100%);
+}
+
+.page-shell { width: min(1680px, calc(100% - 28px)); padding: 12px 0 28px; }
+.forest-footer { display: none !important; }
+.brand-icon {
+  display: block;
+  width: 58px;
+  height: 58px;
+  border: 2px solid var(--line);
+  border-radius: 17px;
+  background: var(--yellow);
+  box-shadow: 0 4px 0 rgba(109,74,30,.28);
+  object-fit: cover;
+  transform: rotate(-2deg);
+}
+.sound-button, .language-switch {
+  border: 3px solid var(--line);
+  border-radius: 15px;
+  background: #fff;
+  box-shadow: 0 4px 0 rgba(73,43,20,.2);
+}
+.sound-button { font-weight: 900; }
+.language-switch { padding: 4px; }
+.language-switch button.active { color: var(--ink); border-color: var(--line); background: var(--yellow); }
+
+.mode-tabs { gap: 10px; margin-bottom: 12px; }
+.mode-tabs button {
+  min-height: 72px;
+  border: 3px solid var(--line);
+  border-radius: 17px;
+  background: rgba(255,253,245,.96);
+  box-shadow: 0 4px 0 rgba(73,43,20,.22);
+}
+.mode-tabs button.active {
+  color: #2b2115;
+  background: var(--yellow);
+  box-shadow: 0 5px 0 #9d672b, 0 9px 18px rgba(106,72,29,.18);
+}
+
+.workspace { grid-template-columns: minmax(245px, 292px) minmax(0, 1fr); gap: 15px; }
+.control-card {
+  border: 3px solid #d9a23c;
+  background: #fffaf0;
+  box-shadow: var(--shadow);
+}
+.control-card .divider { background: #dfc99d; }
+.control-card select,
+.teacher-fields input { border-color: #d9a23c; background: #fffaf0; }
+.scope-note { background: #fff0ca; }
+.tip-box { color: #73531e; }
+.teacher-button, .secondary-button, .primary-button {
+  min-height: 52px;
+  color: var(--ink);
+  border: 3px solid var(--line);
+  border-radius: 15px;
+  box-shadow: 0 4px 0 rgba(64,38,16,.28);
+}
+.teacher-button { border-color: var(--line); background: #fff0ca; }
+.primary-button { background: var(--yellow); }
+.secondary-button { background: #fff; }
+
+.activity-card {
+  overflow: hidden;
+  color: #fff;
+  border: 8px solid var(--line);
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at 92% 12%, rgba(255,255,255,.07) 0 3px, transparent 4px),
+    radial-gradient(circle at 8% 88%, rgba(255,255,255,.05) 0 2px, transparent 3px),
+    linear-gradient(145deg, #984414 0%, #7a350e 56%, #4a210b 100%);
+  background-size: 74px 74px, 57px 57px, auto;
+  box-shadow: var(--shadow), inset 0 0 0 3px rgba(255,255,255,.12), inset 0 0 34px rgba(0,0,0,.18);
+}
+.activity-heading .eyebrow { color: #fff0ca; }
+.activity-heading h2 { color: #fff; text-shadow: 0 2px 0 rgba(0,0,0,.18); }
+.grade-badge { color: var(--ink); border: 3px solid var(--line); background: var(--yellow); box-shadow: 0 3px 0 rgba(31,19,10,.35); }
+.challenge-panel {
+  min-height: 118px;
+  border: 4px solid var(--yellow);
+  border-radius: 20px 12px 20px 12px;
+  background: #fff4d8;
+  box-shadow: 0 5px 0 rgba(74,33,11,.38), inset 0 0 0 3px rgba(255,255,255,.72);
+}
+.challenge-text { color: #4a210b; }
+.tool-guide { color: var(--ink); border-color: #d99c22; background: #fff4d8; }
+.tool-guide-step b { background: var(--yellow); }
+.visual-stage {
+  min-height: 420px;
+  color: var(--ink);
+  border: 3px solid rgba(255,255,255,.72);
+  background:
+    linear-gradient(rgba(255,250,240,.9), rgba(255,250,240,.9)),
+    repeating-linear-gradient(0deg, transparent 0 30px, rgba(245,133,31,.15) 31px);
+  box-shadow: inset 0 0 0 3px rgba(245,133,31,.1), 0 5px 0 rgba(74,33,11,.26);
+}
+.feedback { color: #5a351a; border: 3px solid rgba(255,255,255,.62); background: #fffaf0; }
+.feedback.neutral { color: #765627; background: #fffaf0; }
+.feedback.success { color: #5a2c0c; border-color: #f5851f; background: #fff0ca; }
+.feedback.attention { color: #814000; background: #fff0ca; }
+.choice-chip, .range-control, .metric, .property-card,
+.formula-strip, .property-explanation, .solid-zoom-controls, .solid-drag-hint {
+  color: var(--ink);
+  border-color: #d99c22;
+  background: #fffaf0;
+}
+.choice-chip.active, .metric.active, .property-card.active {
+  color: #5a2c0c;
+  border-color: #f5851f;
+  background: #fff0ca;
+  box-shadow: 0 3px 0 rgba(122,53,14,.22);
+}
+.range-control input { accent-color: #f5851f; }
+.range-control output, .metric strong, .property-card strong,
+.formula-strip, .angle-readout strong { color: #7a350e; }
+.property-explanation { border-color: #f7b96f; background: #fff4d8; }
+.solid-drag-hint { color: #7a350e; border-color: #f5851f; }
+.solid-zoom-controls button { color: #7a350e; }
+.solid-zoom-controls button:hover,
+.solid-zoom-controls button:focus-visible { border-color: #f5851f; background: #fff0ca; }
+.shape-fill.alt, .solid-face.face-2, .cube-face.face-2 { fill: #ffc866; }
+.solid-face.face-4, .cube-face.face-4 { fill: #f6a66a; }
+.solid-face.face-6, .cube-face.face-6 { fill: #ffd894; }
+.solid-edge.feature-active.edge-color-1,
+.planar-edge.edge-color-1 { stroke: #f5851f; }
+.edge-label-color-1 { fill: #7a350e; }
+.measure-line, .ray-move, .circle-main { stroke: #bd4d08; }
+.angle-value-label, .diagram-label.accent,
+.draw-edge-label { fill: #7a350e !important; }
+.solid-face.selected,
+.folding-face-group.active .solid-face { filter: drop-shadow(0 0 5px rgba(245,133,31,.58)); }
+.steps b { background: var(--yellow); }
+.teacher-dialog { border-color: var(--line); background: #fffaf0; }
+
+@media (min-width: 901px) {
+  .sound-button { min-height: 56px; font-size: 20px; }
+  .language-switch button { min-width: 60px; min-height: 46px; font-size: 22px; }
+  .mode-tabs button { min-height: 84px; font-size: clamp(21px, 2vw, 28px); }
+  .activity-heading h2 { font-size: clamp(27px, 2.3vw, 34px); }
+  .challenge-text { font-size: clamp(32px, 3.5vw, 48px); }
+}
+@media (max-width: 900px) {
+  .page-shell { width: min(100% - 24px, 760px); padding-bottom: 28px; }
+  .workspace { grid-template-columns: 1fr; }
+  .control-card { min-height: 0; }
+}
+@media (max-width: 620px) {
+  .page-shell { width: min(100% - 16px, 540px); }
+  .brand-icon { width: 50px; height: 50px; }
+  .mode-tabs button { min-height: 70px; }
+  .activity-card { padding: 16px 12px; border-width: 6px; border-radius: 22px; }
+  .visual-stage { min-height: 310px; }
+  .challenge-panel { min-height: 94px; }
+}
